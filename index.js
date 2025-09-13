@@ -13,7 +13,7 @@ const db = new sqlite3.Database('./clubMons.db',sqlite3.OPEN_READWRITE,(err)=>{
 
 // Affichage des pages
 const app = express()
-const hostname = "127.0.0.1";                    // le localhost qui peut etre modifier
+// const hostname = "127.0.0.1";                    // le localhost qui peut etre modifier
 const PORT = process.env.PORT || 3000;           // le port qui peut etr modifier
 app.use(express.static("public"))                //Afficher les fichiers statiques
 app.use(express.json());                         //Pour parser le body JSON
