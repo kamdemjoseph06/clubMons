@@ -1,5 +1,6 @@
 html {
     background-color: #fff;
+    font-family: 'Poppins';
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -166,7 +167,7 @@ a:hover {
 
 /************Footer*************************/
 footer {
-    background-size: 100% 14em;
+    background-size: 100% 15em;
     height: auto;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -335,7 +336,14 @@ footer {
     overflow-x: hidden; 
 }
 
-.barMenu{display: none;}
+.barMenu{
+    display: none;
+}
+
+.barMenux{
+    display: none;
+}
+
 
 .Nav {
     display: flex; 
@@ -348,9 +356,10 @@ footer {
     margin-left: -15px;
 }
 
-
-.middle{display: flex; 
-    margin: 0;/* margin: 0;
+.middle{
+    display: flex; 
+    margin: 0;
+    /* margin: 0;
     width: 100%;
     height: auto; display: -ms-flexbox; */
     /* -ms-flex-wrap: wrap;
@@ -409,14 +418,18 @@ footer {
 
 .description {  
     background-color: rgb(59, 40, 40);
+
     color: #fff;
     overflow-x: hidden;
 }
 
 .descriptionText{
+    font-size: 16px;
     display: flex;
-    justify-content: center;padding-left: 2em;
+    justify-content: center;
+    padding-left: 2em;
     padding-right: 2em;
+    padding-bottom: 1em;
 }
 
 
@@ -425,27 +438,68 @@ footer {
 
 
 @media screen and (max-width:463px) {
-   .barMenu{
-    display: block;color: #fff;margin: 0;
+    footer{
+        background-image: auto; 
+        z-index: 10;
+        height: auto;
+    }
+    .Nav{ position: relative;text-align: center;
+    /* display: grid;
+    grid-template-columns:  1fr;
+    gap: 0; 
+    grid-template-rows:  auto 1fr ;
+    grid-template-areas: ' middle ' 
+                            ' .' */
    }
 
-    .Nav{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0; 
-    grid-template-rows:  auto ;
-    grid-template-areas: 'navMenu middle '
-                        'navMenu .';
+   .btnHistorique:hover, .btnActualite:hover, .btnEvenement:hover,.btnLogin:hover {
+    border-color: #fff;  
+    }
+
+    .navLogin, .navHistorique, .navActualite, .navEvenement  {
+        border-color: #fff;
+    }
+
+    .barMenu{
+        display: block;
+        padding: 1em;
+        width: auto;
+        box-sizing: border-box;
+        margin: 1.5em;
+        font-size: 19px;
+        transition: 0.3 ease;
+        border: 1px solid black;
+    }
+
+    .barMenux{
+        display: none;
+        text-align: center;
+        margin: 1.5em;
+        cursor: pointer;
+        font-size: 19px;
+        color: #fff;
+        transition: 0.3 ease;
    }
 
     .navMenu{
-        display: grid;
-        grid-area: navMenu;
-        border:1px solid black;
+        display: none;
+        position: absolute;
+        z-index: 9999;
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1em;
+        width: auto;
+        box-sizing: border-box;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        font-size: 16px;
+        /* grid-area: navMenu; */
+        border:1px solid rgb(255, 255, 255);
         background-color: rgb(59, 40, 40);
         height: 100%;
-        place-items: center;
-    }
+        /* place-items: center;*/
+    }  
 
     .btnLogin {
         color: #fff;
@@ -459,7 +513,8 @@ footer {
         grid-template-rows:  auto ;
         grid-template-areas: 'marqueeDescription'
                             'description';
-        border:1px solid black;
+        border:1px solid black;z-index: 1;
+        font-size: 16px;
     } 
 
 
@@ -473,8 +528,11 @@ footer {
         display: grid;
         grid-area: description;
         width:100%;
+        text-align: justify;
         height: auto;
         border:1px solid black;padding: .5em;
-    } 
+    }
+
+    
 
 }

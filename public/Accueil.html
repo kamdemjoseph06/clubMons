@@ -9,12 +9,13 @@
     <link rel="stylesheet" type="text/css" href="../css/all.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/accueil.css">
+    <link rel="stylesheet" type="text/css" href="../css/tailwind.css">
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-
+   
     <script type="text/javascript" src="../js/eel.js"></script>
     <script type="text/javascript" src="../js/all.js"></script>
     <script type="text/javascript" src="../js/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="../js/bootstrap.bundle.js"></script> -->
+    <script type="text/javascript" src="https://cdn.tailwindcss.com"></script>
     <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="../js/accueil.js"></script>
     <script type="text/javascript" src="../js/font-awesome.min.js"></script>
@@ -27,14 +28,15 @@
     <!-- Bannière   static-->
     <div class="bannière row">
         <!-- <img class="bannière_logo1" src="../static/static_Img/backFoot7.jpg" alt=""> -->
-        <img class="bannière_logo2" src="../static_Img/logo01.png"alt="" style="width: 100%;">
+        <img class="bannière_logo2" src="../static_Img/logo01.png" alt="" style="width: 100%;">
         <!-- <img class="bannière_logo3" src="../static_Img/LOGO.jpg" alt=""> -->
     </div>
 
     <div class="menu ">
         <div class="Nav "> 
-            <nav class="navMenu">
-                <div class="barMenu"><i class="fa fa-bars"></i> Menu</div>  
+            <div class="barMenu shadow-md"><i class="fa fa-bars"></i> <span>Menu</span> </div>  
+            <nav class="navMenu ">
+                <div class="barMenux"><i class="fas fa-x"></i> <span>Menu</span> </div>  
                 <span class="navActualite dropdown" aria-haspopup="true" aria-expanded="false">
                     <button type="button "  class="btn  dropdown-toggle btnActualite " id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa-solid fa-circle-info"></i> Actualités</button> <!--<a href=" ">  </a> btn_accueil  btn_connect -->
                     <div class="dropdown-menu spanActualite ">
@@ -50,16 +52,17 @@
                         <a class="dropdown-item" href="">Soirée Culturel</a>
                     </div>
                 </span>
-                <span class="navHistorique "> <!--dropdown-->
-                    <button class="btn  btnHistorique" data-toggle="popover" data-container="body"  data-placement="left" data-content="Accès sous connection" title=""   type="button " ><i class="fas fa-history"></i> Historique <i class="fa fa-caret-down"></i> </button> <!--class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"   btn_accueil btn_connect -->
-                    <!-- <div class="dropdown-menu spanHistorique " aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="">Création</a>
+                <span class="navHistorique dropdown"> <!--dropdown-->
+                    <button class="btn  btnHistorique " style="color: gray;"  type="button " ><i class="fas fa-history"></i> Historique <i class="fa fa-caret-down" style="color: gray;"></i> </button> <!--class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"   btn_accueil btn_connect -->
+                    <div class="dropdown-menu spanHistorique " style="background-color: rgb(59, 40, 40);" aria-labelledby="dropdownMenuButton">
+                        <span class="dropdown-item" style="background-color: rgb(59, 40, 40);color:#fff;" href="">Accès sous connection</span>
+                        <!-- <a class="dropdown-item" href="">Création</a>
                         <a class="dropdown-item" href="">Statut</a>
-                        <a class="dropdown-item" href="">Histoire</a>
-                    </div> -->
+                        <a class="dropdown-item" href="">Histoire</a> -->
+                    </div>
                 </span>
                 <span class="navLogin dropdown">
-                    <button class="btn dropdown-toggle btnLogin" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Login</button>
+                    <button class="btn dropdown-toggle btnLogin" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><i class=" fa fa-user"></i> Log</button>
                     <div class="dropdown-menu spanLogin" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item aInscri" onclick="location.href='/inscription' ">S'Inscrire</a>
                         <a class="dropdown-item" onclick="location.href='/connection'">Se Connecter</a>

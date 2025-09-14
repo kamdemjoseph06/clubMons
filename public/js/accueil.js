@@ -157,7 +157,17 @@ $(document).ready(function() {
 
     ////*  */////
 
+    $('.barMenux').on('click', function() {
+        $('.barMenu').toggle(700);
+        $('.barMenux').hide(850);
+        $('.navMenu').hide(850);
+    });
 
+    $('.barMenu').on('click', function() {
+        $('.barMenu').hide(400);
+        $('.barMenux').show(450);
+        $('.navMenu').show(650).css('display','flex').css('position','absolute').css('z-index',' 9999').css('flex-direction','column').css('','').css('','').css('','').css('','');
+    });
 
 
 
@@ -216,6 +226,7 @@ $(document).ready(function() {
     $('.carousel').carousel()
     $('.popover').popover()
     $('.btnHistorique').popover('show')
+    $('[data-toggle="tooltip"]').tooltip();
     $(function () {
         $('[data-toggle="popover"]').popover()
       })
