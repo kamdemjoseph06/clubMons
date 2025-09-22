@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../css/all.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/accueil.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+
+    <script type="text/javascript" src="../js/eel.js"></script>
+    <script type="text/javascript" src="../js/all.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../js/accueil.js"></script>
+    <script type="text/javascript" src="../js/font-awesome.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+    <title>Evènements</title>
+
+</head>
+
+<body>
+    <!-- Bannière -->
+    <div class="bannière">
+        <!-- <img class="bannière_logo1"  src="../static/static_Img/backFoot7.jpg" alt=""> -->
+        <img class="bannière_logo2" src="../static_Img/logo01.png" style="width: 100%;" alt="">
+        <!-- <img class="bannière_logo3" src="../static_Img/LOGO.jpg" alt=""> -->
+    </div>
+
+    <!-- Aller se Connecter ou s inscrire -->
+    <!-- <span style="display: flex;justify-content:flex-end;">
+         <span class="nomUser"></span>
+    <button type="button" class="btn btn-oultine btn_disconnect"><a href="Connection.html" class="a" style="text-decoration: none;">Déconnection</a></button>
+    </span> -->
+
+
+    <div class="menu">
+        <div class="Nav " style="display: flex;width: 100%;margin: 0;">
+            
+            <nav class="navMenu" style="height: 5em;">
+                <div class="barMenu"><i class="fa fa-bars"></i> Menu</div> 
+                <span class="navHistorique "> <!--dropdown-->
+                    <button class="btn  btnHistorique" type="button " ><i class="fa fa-home"></i> Accueil </button> <!--class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"   btn_accueil btn_connect -->
+                </span>   
+                <span class="navActualite dropdown">
+                    <button type="button "  class="btn  dropdown-toggle btnActualite " id="dropdownMenuButton" data-toggle="dropdown" > <i class="fa-solid fa-circle-info"></i> Actualités</button> <!--<a href=" ">  </a> btn_accueil  btn_connect -->
+                    <div class="dropdown-menu spanActualite ">
+                        <a class="dropdown-item" href="">Dernières Actualités</a>
+                        <a class="dropdown-item" href="">Evènement à venir</a>
+                    </div>
+                </span>
+                <span class="navEvenement dropdown">
+                    <button type="button " class="btn  dropdown-toggle btnEvenement" id="dropdownMenuButton" data-toggle="dropdown"><i class="fa-solid fa-calendar-days"></i> Evènements</button> <!--btn_accueil btn_connect -->
+                    <div class="dropdown-menu spanEvenement " aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="">MPVE</a>
+                        <a class="dropdown-item" href="">Footing</a>
+                        <a class="dropdown-item" href="">Soirée Culturel</a>
+                    </div>
+                </span>
+                <span class="navHistorique dropdown">
+                    <button class="btn dropdown-toggle btnHistorique " id="dropdownMenuButton" data-toggle="dropdown" type="button " aria-haspopup="true" aria-expanded="false"><i class="fas fa-history"></i> Historique</button> <!--btn_accueil btn_connect -->
+                    <div class="dropdown-menu spanHistorique " aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="">Création</a>
+                        <a class="dropdown-item" href="">Statut</a>
+                        <a class="dropdown-item" href="">Histoire</a>
+                    </div>
+                </span>
+                <span class="navLogin dropdown">
+                    <button class="btn dropdown-toggle btnLogin" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Login</button>
+                    <div class="dropdown-menu spanLogin" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item aInscri" onclick="location.href='/inscription' ">S'Inscrire</a>
+                        <a class="dropdown-item" onclick="location.href='/connection'">Se Connecter</a>
+                    </div>
+                </span>
+            </nav>
+        </div>
+        <div style="height: 20em;"></div>
+    </div>
+</body>
+
+<footer class="" style="background: linear-gradient(155deg,white 50%,rgb(59, 40, 40) 50%);font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"> <!--  background-image: url( '../static_Img/backFoot311_resultat.jpg') ; -->
+    <div class="info_content">
+        <div class="info_header ">
+            <!-- <p>Rue Saint-Claire Face Immeuble des Députés</p> -->
+            <span class="follow" >
+                <span class="followImage"><a class="followImage" onclick="location.href='/accueil'"> <img src="../static_Img/LOGO.jpg" alt=""> </span></a>
+                <span class="followLink" >
+                    <span class="followLinkI"><i  class=" fa-brands fa-facebook-f ffb "></i></span>
+                    <span class="followLinkI"><i  class=" fa-brands fa-whatsapp fwp "></i></span>
+                    <span class="followLinkI"><i  class=" fa-brands fa-x-twitter ftwt "></i></span>
+                    <span class="followLinkI"><i class=" fa-solid fa-envelope fgm "></i></span>
+                    <span class="followLinkI"><i class=" fa-brands fa-youtube fytb "></i></span></span>       
+                </span>
+            </span>
+            <span class="info_footer">
+                <span  class="copy ">Copyright &copy; 2025</span>
+                <span class="made " style="margin: 1em;word-spacing: .35em; ">KFTJ | GMT</span>
+            </span>
+        </div>
+    </div>
+</footer>
+
+
+
+</html>

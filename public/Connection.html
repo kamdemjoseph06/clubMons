@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../css/all.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/accueil.css">
+    <link rel="stylesheet" type="text/css" href="../css/connexion.css">
+    <link rel="stylesheet" type="text/css" href="../css/fontawesome.min.css">
+
+    <script type="text/javascript" src="../js/eel.js"></script>
+    <script type="text/javascript" src="../js/all.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/accueil.js"></script>
+    <script type="text/javascript" src="../js/fontawesome.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../views/erreur.ejs"></script>
+
+    <title>Connection</title>
+</head>
+
+<body style="background-image: url('../static_Img/backFoot2.jpg') ;background-repeat: no-repeat;background-position: center center;
+background-size: cover;">
+    <div>
+        <!-- Bannière -->
+        <div class="bannière">
+            <!-- <img class="bannière_logo1" src="../static/static_Img/backFoot7.jpg" alt=""> -->
+            <img class="bannière_logo2" src="../static_Img/logo01.png" style="width: 100%;" alt="">
+            <!-- <img class="bannière_logo3" src="../static_Img/LOGO.jpg" alt=""> -->
+        </div>
+
+        <span style="display: flex;justify-content:flex-end;margin-right: 2em;margin-top: 2em;">
+            <button type="button"  class="btn  btnActualite  " ><a onclick="location.href='/accueil'"><i class=" fa fa-chevron-left"></i> <i class="fa-solid fa-home" style="margin-left: .3em;"></i>  Accueil</a></button>
+        </span>
+       
+        <!-- Se connecter -->
+        <div class="form-connection text-center" style="display:flex;margin-bottom: 6em;">
+            <form action="/connection" method="POST" class="text-center">
+                <input type="text" name="NomUsers" id="" class="form-control inpt_connection NomUser" placeholder="&#x1F464;" required>
+                <input type="password" name="PassUsers" id="seemore" class="form-control inpt_connection PassUser" placeholder="&#128274;" required>
+                <!-- <p onclick="togglePassword()" id="btn" style="cursor: pointer;">iiiiiii</p> -->
+                <button type="submit" class="btn btn_connection"><a style="color: white; " >Connection</a>  </button>
+            </form>
+        </div>
+</body>
+
+<footer class="" style="background: linear-gradient(150deg,white 50%,rgb(59, 40, 40) 50%);font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"> <!--  background-image: url( '../static_Img/backFoot311_resultat.jpg') ; -->
+    <div class="info_content">
+        <div class="info_header ">
+            <!-- <p>Rue Saint-Claire Face Immeuble des Députés</p> -->
+            <span class="follow" >
+                <span class="followImage"><a class="followImage" onclick="location.href='/accueil'"> <img src="../static_Img/LOGO.jpg" alt=""> </span></a>
+                <span class="followLink" >
+                    <span class="followLinkI"><i  class=" fa-brands fa-facebook-f ffb "></i></span>
+                    <span class="followLinkI"><i  class=" fa-brands fa-whatsapp fwp "></i></span>
+                    <span class="followLinkI"><i  class=" fa-brands fa-x-twitter ftwt "></i></span>
+                    <span class="followLinkI"><i class=" fa-solid fa-envelope fgm "></i></span>
+                    <span class="followLinkI"><i class=" fa-brands fa-youtube fytb "></i></span></span>       
+                </span>
+            </span>
+            <span class="info_footer">
+                <span  class="copy ">Copyright &copy; 2025</span>
+                <span class="made " style="margin: 1em;word-spacing: .35em; ">KFTJ | GMT</span>
+            </span>
+        </div>
+    </div>
+</footer>
+
+</html>

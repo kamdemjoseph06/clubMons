@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../css/all.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/accueil.css">
+    <link rel="stylesheet" type="text/css" href="../css/actualite.css">
+    <link rel="stylesheet" type="text/css" href="../css/tailwind.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+   
+    <script type="text/javascript" src="../js/eel.js"></script>
+    <script type="text/javascript" src="../js/all.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="text/javascript" src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../js/accueil.js"></script>
+    <script type="text/javascript" src="../js/actualite.js"></script>
+    <script type="text/javascript" src="../js/font-awesome.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+    <title>Actualités</title>
+</head>
+
+<body class="" style="background-image: url('../static_Img/backFoot2.jpg') ;background-repeat: no-repeat;background-position: center center;
+background-size: cover;">
+    <!-- Bannière   static-->
+    <div class="bannière row">
+        <!-- <img class="bannière_logo1" src="../static/static_Img/backFoot7.jpg" alt=""> -->
+        <img class="bannière_logo2" src="../static_Img/logo01.png" alt="" style="width: 100%;">
+        <!-- <img class="bannière_logo3" src="../static_Img/LOGO.jpg" alt=""> -->
+    </div>
+
+    <div class="menu ">
+        <div class="Nav "> 
+            <div class="barMenu shadow-md" ><i class="fa fa-bars"></i> <span>Menu</span> </div>  
+            <nav class="navMenu ">
+                <div class="barMenux" ><i class="fas fa-x"></i> <span>Menu</span> </div>  
+                <span class="navActualite dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button " onclick="location.href='/accueil'" class="btn  dropdown-toggle btnActualite " > <i class="fa-solid fa-home"></i> Accueil</button> <!--<a href=" ">  </a> btn_accueil  btn_connect -->
+                    <!-- id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" -->
+                    <!-- <div class="dropdown-menu spanActualite ">
+                        <a class="dropdown-item" onclick="location.href='/actualite#lastStory'">Dernières Actualités</a>
+                        <a class="dropdown-item" onclick="location.href='/actualite#futurStory'">Evènement à venir</a>
+                    </div> -->
+                </span>
+                <span class="navEvenement dropdown">
+                    <button type="button " class="btn  dropdown-toggle btnEvenement" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-calendar-days"></i> Evènements</button> <!--btn_accueil btn_connect -->
+                    <div class="dropdown-menu spanEvenement " aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="">MPVE</a>
+                        <a class="dropdown-item" href="">Footing</a>
+                        <a class="dropdown-item" href="">Soirée Culturel</a>
+                    </div>
+                </span>
+                <span class="navHistorique dropdown"> <!--dropdown-->
+                    <button class="btn  btnHistorique dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"  type="button " ><i class="fas fa-history"></i> Historique  </button> <!-- aria-haspopup="true" aria-expanded="false" style="color: gray;" <i class="fa fa-caret-down" style="color: gray;"></i>  btn_accueil btn_connect -->
+                    <div class="dropdown-menu spanHistorique " " aria-labelledby="dropdownMenuButton">
+                        <!-- <span class="dropdown-item" style="background-color: rgb(59, 40, 40);color:#fff;" href="">Accès sous connection</span> -->
+                        <a class="dropdown-item" href="">Création</a>
+                        <a class="dropdown-item" href="">Statut</a>
+                        <a class="dropdown-item" href="">Histoire</a>
+                    </div>
+                </span>
+                <span class="navLogin dropdown">
+                    <button class="btn dropdown-toggle btnLogin" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><i class=" fa fa-user"></i> Log</button>
+                    <div class="dropdown-menu spanLogin" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item aInscri" onclick="location.href='/inscription' ">S'Inscrire</a>
+                        <a class="dropdown-item" onclick="location.href='/connection'">Se Connecter</a>
+                    </div>
+                </span>
+            </nav>
+
+            <div class="content">
+                <div>
+                    <h2 id="lastStory" class="lastStory">Dernières Actualités <i class="fa fa-caret-down" style="margin-left: .2em;"></i></h2>
+                    <div class="lastStoryMenu">
+                        <h4>
+                            <p class="video"> <i class="fa-solid fa-video" style="margin-right: .4em;"> </i> <span>En Vidéos</span> </p>
+                            <div id="app">
+                                <ul>
+                                    <li v-for="user in users" :key="user.id">
+                                        <!-- {{user.nom}} -->
+                                    </li>
+                                </ul>
+                            </div>
+                        
+                        </h4>
+                        <h4>
+                            <p class="image"> <i class="fa-solid fa-image" style="margin-right:.4em"> </i> <span>En Images</span></p>
+                        </h4>
+                        <h4>
+                            <p class="doc dropdown">
+                                <p class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">
+                                    <i class="fa-solid fa-file" style="margin-right: .4em;"> </i> <span>Documentation</span>
+                                    <div class="dropdown-menu spanLogin" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" onclick="location.href='/connection'">Rapports de Réunion | Se conecter..</a>
+                                    </div>
+                                </p>   
+                            </p> 
+                        </h4>
+                    </div>
+                </div>
+                <div>
+                    <h2 id="futurStory" class="futurStory">Evènements à venir</h2>
+                    <div class="futurStoryMenu">
+                        <span >
+                            <span class=""> <i style="color: rgb(255, 255, 198);"><b><i class=" fa fa-info-circle"></i> <span style="color: rgb(243, 243, 189);">Prochaine Assemblée Générale en Mars 2026</span></b></i> </span>
+                            <span style="display:block;">Vous pouvez tout retrouver sur Evènements.</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-bottom:5em;"></div>
+    </div>
+</body>
+
+<footer class="" style="background: linear-gradient(155deg,white 50%,rgb(59, 40, 40) 50%);font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"> <!--  background-image: url( '../static_Img/backFoot311_resultat.jpg') ; -->
+    <div class="info_content">
+        <div class="info_header ">
+            <!-- <p>Rue Saint-Claire Face Immeuble des Députés</p> -->
+            <span class="follow" >
+                <span class="followImage"><a class="followImage" onclick="location.href='/accueil'"> <img src="../static_Img/LOGO.jpg" alt=""> </span></a>
+                <span class="followLink" >
+                    <span class="followLinkI"><i  class=" fa-brands fa-facebook-f ffb "></i></span>
+                    <span class="followLinkI"><i  class=" fa-brands fa-whatsapp fwp "></i></span>
+                    <span class="followLinkI"><i  class=" fa-brands fa-x-twitter ftwt "></i></span>
+                    <span class="followLinkI"><i class=" fa-solid fa-envelope fgm "></i></span>
+                    <span class="followLinkI"><i class=" fa-brands fa-youtube fytb "></i></span></span>       
+                </span>
+            </span>
+            <span class="info_footer">
+                <span  class="copy ">Copyright &copy; 2025</span>
+                <span class="made " style="margin: 1em;word-spacing: .35em; ">KFTJ | GMT</span>
+            </span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // $('.barMenux').off('click').on('click', function() {
+    //     $('.barMenu').toggle(700);
+    //     $('.barMenux').hide(700);
+    //     $('.navMenu').hide(700);
+    // });
+
+
+    // $('.barMenu').off('click').on('click', function() {
+    //     $('.barMenu').hide(450);
+    //     $('.barMenux').show(550);
+    //     $('.navMenu').show(550).css('position','absolute').css('z-index',' 9999').css('flex-direction','column').css('','').css('','').css('','').css('','');
+    // });
+
+
+
+///Vuejs
+const { createApp } = Vue;
+createAp({
+        name:'users',
+        data(){
+            return {
+                users:[]
+            }
+        },
+        mounted(){
+            fetch('/actualite', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                })
+            .then(res =>res.json())
+            .then(data => {
+                this.users=data
+            })
+            .catch(err => console.error(err))
+        }
+    }).mount('#app');
+</script>
+</html>

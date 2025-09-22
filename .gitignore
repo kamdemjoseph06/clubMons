@@ -1,0 +1,8 @@
+node_modules/
+.env
+dist/
+*.log
+.DS_Store
+public/static_Img/*.svg  # si certains fichiers ont des noms très longs
+
+

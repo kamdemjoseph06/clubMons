@@ -1,0 +1,153 @@
+.menuBody{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'gridContentAA gridContent';
+    gap: 1em;
+}
+
+.gridContent{
+    display: grid;
+    grid-area: gridContent;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'gridContentA gridContentB'
+                        'gridContentC gridContentD';
+    gap: 1em;
+}
+
+.gridContentAA{
+    margin-left: 1em;
+    border: 1px solid black;
+}
+.gridContentA{
+    display: grid;
+    grid-area: gridContentA;
+    scroll-behavior: smooth;
+}
+
+.gridContentB{
+    display: grid;
+    grid-area: gridContentB;
+    scroll-behavior: smooth;
+}
+
+.gridContentC{
+    display: grid;
+    grid-area: gridContentC;
+    scroll-behavior: smooth;
+}
+
+.gridContentD{
+    display: grid;
+    grid-area: gridContentD;
+    scroll-behavior: smooth;
+}
+
+.modif,.modifPhoto,.supp,.suppPhoto,.modifGalerie,.suppGalerie,.modifTel,.suppTel,.modifProfil,.suppProfil{
+    display: flex;
+}
+
+.modif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5em;
+    box-shadow: 0 .2em 0.6em 0;
+    width: 6em;
+    height: 2em;
+    padding: .5em;
+    cursor: pointer;
+    color: rgb(72, 72, 255);
+}
+
+.modif:hover {
+    text-align: center;
+    cursor: pointer;
+    border-radius: .5em;
+    width: 6em;
+    height: 2em;
+    padding: .75em;
+    background-color: rgb(72, 72, 255);
+    color: #fff;
+}
+
+.supp {
+    display: flex;
+    border-radius: .5em;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 .2em .6em 0;
+    width: 6em;
+    height: 2em;
+    padding: .5em;
+    cursor: pointer;
+    color: rgb(255, 72, 72)
+}
+
+.supp:hover {
+    text-align: center;
+    cursor: pointer;
+    border-radius: .5em;
+    width: 6em;
+    height: 2em;
+    padding: .75em;
+    background-color: rgb(255, 72, 72);
+    color: #fff;
+}
+
+.suppButton {
+    border-color: rgb(255, 72, 72);
+    width: 8em;
+    height: 3em;
+    border-radius: 4em;
+    color: rgb(255, 72, 72);
+}
+
+.suppButton:hover {
+    border-color: rgb(255, 72, 72);
+    background-color: rgb(255, 72, 72);
+    color: #fff;
+}
+
+.gridContentAContent,.gridContentBContent,.gridContentCContent,.gridContentDContent{
+    display: flex;
+    flex-direction: row;
+}
+
+.gridContentAA,.gridContentA,.gridContentB,.gridContentC,.gridContentD{
+    display: flex;
+    flex-direction: row;
+}
+
+.paraPersoTitleAA,.paraPersoTitleB,.paraPersoTitleA,.paraPersoTitleC,.paraPersoTitleD {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 1em;
+    padding: .65em;
+    width: auto;
+    height: auto;
+    background-color: rgb(59, 40, 40);
+    color: #fff;
+}
+
+.paraPersoTitleAA:hover,.paraPersoTitleB:hover,.paraPersoTitleA:hover,.paraPersoTitleC:hover,.paraPersoTitleD:hover {
+    text-align: center;
+    cursor: pointer;
+    border-radius: 1em;
+    padding: .65em;
+    width: auto;
+    height: auto;
+    background-color: rgb(59, 40, 40);
+    color: #fff;
+}
+
+.imgSvg {
+    position: absolute;
+    float: right;
+    z-index: 1;
+    width: 20em;
+    height: 20em;
+}
