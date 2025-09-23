@@ -269,7 +269,7 @@ const sqliteDB = new sqlite3.Database(join(__dirname, 'clubMons.db'), sqlite3.OP
   if (err) return console.error(err.message);
   console.log('Connected to SQLite database.');
 });
- 
+ const PORT = process.env.PORT || 3000;
 
 // ========================
 // 3️ Créer les tables si elles n'existent pas
@@ -367,8 +367,7 @@ app.post('/actualite', (req, res) => {
 // ========================
 // 8️ Lancer le serveur
 // ========================
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Serveur démarré sur http://localhost:${PORT}`);
 
+app.listen(PORT, () => {
+  console.log(`Serveur démarré sur le port ${PORT}`);
 });
