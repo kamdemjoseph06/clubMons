@@ -311,6 +311,11 @@ app.use(express.urlencoded({ extended: true }));
 // ========================
 // 6️ Routes HTML simplifiées 
 // ========================
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "Accueil.html"));
+});
+
 const pages = ['Accueil', 'Inscription', 'Connection', 'Actualite', 'Evenement', 'Historique', 'Parametre', 'Compte'];
 pages.forEach(page => {
   app.get(`/${page.toLowerCase()}`, (req, res) => {
